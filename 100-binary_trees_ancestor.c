@@ -24,31 +24,32 @@ size_t binary_tree_depth(const binary_tree_t *tree)
  */
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second)
 {
-    binary_tree_t *ps;
-    size_t first_d, second_d;
+	binary_tree_t *ps;
+	size_t first_d, second_d;
 
-    if (!first || !second)
-    {
-        return (NULL);
-    }
+	if (!first || !second)
+	{
+		return (NULL);
+	}
 
-    if (first == second)
-    {
+	if (first == second)
+	{
 		return ((binary_tree_t *)first);
 	}
 
-    first_d = binary_tree_depth(first);
-    second_d = binary_tree_depth(second);
+	first_d = binary_tree_depth(first);
+	second_d = binary_tree_depth(second);
 
-    if (first_d >= second_d)
-    {
-        ps = binary_trees_ancestor(first->parent, second);
-    }
-    else if (second_d > first_d)
-    {
-        ps = binary_trees_ancestor(first, second->parent);
-    }
+	if (first_d >= second_d)
+	{
+		ps = binary_trees_ancestor(first->parent, second);
+	}
+	else if (second_d > first_d)
+	{
+		ps = binary_trees_ancestor(first, second->parent);
+	}
 
 
-    return (ps);
+	return (ps);
 }
+	
