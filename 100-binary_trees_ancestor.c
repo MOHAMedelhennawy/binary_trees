@@ -4,7 +4,7 @@
  * @tree: is a pointer to the root node of the tree to measure the height.
  * Return: the height of a binary tree.
  */
- 
+
 size_t binary_tree_depth(const binary_tree_t *tree)
 {
 
@@ -52,4 +52,3 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
 
 	return (ps);
 }
-	
